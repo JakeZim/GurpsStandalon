@@ -1,6 +1,6 @@
 package home.model;
 
-public enum Skills
+public enum Skill
 {
     ACADEMICS("IQ", "HARD"), // Philosophy, History, politics
     ACROBATICS("DX", "HARD"), // Balance, Flips, Falls
@@ -41,7 +41,7 @@ public enum Skills
     private String stat;
     private String difficulty;
 
-    Skills(String stat, String difficulty)
+    Skill(String stat, String difficulty)
     {
         this.stat = stat;
         this.difficulty = difficulty;
