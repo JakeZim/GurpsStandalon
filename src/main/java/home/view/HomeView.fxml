@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="680.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeViewController">
+   <children>
+      <TabPane layoutY="44.0" maxWidth="1.7976931348623157E308" prefHeight="630.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="1.7976923134862315E308">
+        <tabs>
+          <Tab text="Stats|Skills|Combat">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="639.0">
+                     <children>
+                        <TextField fx:id="STR" layoutX="43.0" layoutY="14.0" onAction="#updateSTR" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="14.0" layoutY="17.0" text="STR" />
+                        <TextField fx:id="DX" layoutX="43.0" layoutY="44.0" onAction="#updateDX" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="14.0" layoutY="47.0" text="DX" />
+                        <TextField fx:id="IQ" layoutX="43.0" layoutY="74.0" onAction="#updateIQ" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="14.0" layoutY="77.0" text="IQ" />
+                        <TextField fx:id="HT" layoutX="43.0" layoutY="104.0" onAction="#updateHT" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="14.0" layoutY="107.0" text="HT" />
+                        <TextField fx:id="DMG" editable="false" layoutX="134.0" layoutY="14.0" onAction="#updateDMG" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="99.0" layoutY="17.0" text="DMG" />
+                        <TextField fx:id="HP" layoutX="208.0" layoutY="14.0" onAction="#updateHP" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="180.0" layoutY="17.0" text="HP" />
+                        <TextField fx:id="WILL" layoutX="134.0" layoutY="74.0" onAction="#updateWill" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="99.0" layoutY="77.0" text="WILL" />
+                        <TextField fx:id="PER" layoutX="208.0" layoutY="74.0" onAction="#updatePER" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="180.0" layoutY="77.0" text="PER" />
+                        <TextField fx:id="PPE" layoutX="43.0" layoutY="135.0" onAction="#updatePPE" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="14.0" layoutY="138.0" text="PPE" />
+                        <TextField fx:id="FP" layoutX="134.0" layoutY="104.0" onAction="#updateFP" prefHeight="23.0" prefWidth="36.0" text="10" />
+                        <Label layoutX="99.0" layoutY="107.0" text="FP" />
+                        <TableView fx:id="SKILL_TABLE" layoutX="10.0" layoutY="195.0" prefHeight="281.0" prefWidth="605.0">
+                          <columns>
+                              <TableColumn fx:id="SKILL_TRAINED_COL" prefWidth="75.0" text="Trained" />
+                            <TableColumn fx:id="SKILL_NAME_COL" editable="false" prefWidth="75.0" text="Skill" />
+                            <TableColumn fx:id="SKILL_STAT_COL" editable="false" prefWidth="75.0" text="Stat" />
+                              <TableColumn fx:id="SKILL_RANK_COL" prefWidth="75.0" text="Rank" />
+                              <TableColumn fx:id="SKILL_TARGET_COL" editable="false" prefWidth="75.0" text="Target" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="SPEED" layoutX="43.0" layoutY="164.0" onAction="#updateSpeed" prefHeight="23.0" prefWidth="36.0" text="5" />
+                        <Label layoutX="14.0" layoutY="167.0" text="SPD" />
+                        <TextField fx:id="MOVE" layoutX="132.0" layoutY="164.0" onAction="#updateMove" prefHeight="23.0" prefWidth="36.0" text="5" />
+                        <Label layoutX="97.0" layoutY="167.0" text="MOVE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Advantages|Disadvantages">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab text="Inventory">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="INVENTORY" editable="true" layoutX="10.0" layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="605.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Item" />
+                            <TableColumn prefWidth="75.0" text="Description" />
+                              <TableColumn prefWidth="75.0" text="Amount" />
+                              <TableColumn prefWidth="75.0" text="Weight" />
+                              <TableColumn prefWidth="75.0" text="Cost" />
+                              <TableColumn prefWidth="75.0" text="Notes" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="LIFT" editable="false" layoutX="40.0" layoutY="9.0" prefHeight="23.0" prefWidth="36.0" text="20" />
+                        <Label layoutX="15.0" layoutY="12.0" text="Lift" />
+                        <Label layoutX="310.0" layoutY="13.0" text="Total Weight" />
+                        <TextField fx:id="WEIGHT" editable="false" layoutX="385.0" layoutY="9.0" prefHeight="23.0" prefWidth="71.0" />
+                        <Label layoutX="465.0" layoutY="14.0" text="Encumberance" />
+                        <TextField fx:id="ENCUMBERANCE" layoutX="550.0" layoutY="10.0" prefHeight="23.0" prefWidth="71.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Bio">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="594.0" prefWidth="639.0">
+                     <children>
+                        <TextArea fx:id="BIO" layoutX="10.0" layoutY="145.0" prefHeight="450.0" prefWidth="605.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="SM" />
+                        <TextField fx:id="SM" layoutX="54.0" layoutY="11.0" onAction="#updateSizeMod" prefHeight="23.0" prefWidth="36.0" text="0" />
+                        <TextField fx:id="LANG_1" layoutX="468.0" layoutY="37.0" promptText="Language" />
+                        <Label layoutX="512.0" layoutY="14.0" text="Languages" />
+                        <TextField fx:id="LANG_2" layoutX="468.0" layoutY="60.0" promptText="Language" />
+                        <TextField fx:id="LANG_3" layoutX="468.0" layoutY="83.0" promptText="Language" />
+                        <TextField fx:id="LANG_4" layoutX="468.0" layoutY="106.0" promptText="Language" />
+                        <Label layoutX="13.0" layoutY="52.0" text="Wealth" />
+                        <ComboBox fx:id="WEALTH" editable="true" layoutX="54.0" layoutY="48.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Notebook">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="NOTES" layoutX="10.0" layoutY="10.0" prefHeight="585.0" prefWidth="605.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="500.0" layoutY="16.0" text="Points:" />
+      <TextField fx:id="CHARACTER_COST" disable="true" editable="false" layoutX="540.0" layoutY="12.0" prefHeight="25.0" prefWidth="71.0" />
+      <TextField fx:id="CHARACTER_NAME" layoutX="10.0" layoutY="13.0" prefHeight="23.0" prefWidth="223.0" promptText="Character Name" />
+   </children>
+</AnchorPane>
